@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Chat.Api</name>
+    </assembly>
+    <members>
+        <member name="M:Chat.Api.Controllers.GroupController.Add(Chat.Api.Core.Domains.ChatGroupDto)">
+            <summary>
+            To Add new Group of entity Model.
+            </summary>
+            <param name="ChatGroupDto">Requies parameter of required entity Model</param>
+            <returns>Returns object of type Reponse as Json result as a success or failed response</returns>
+        </member>
+        <member name="M:Chat.Api.Controllers.GroupController.GetList">
+            <summary>
+            To Get List of Group
+            </summary>
+            <returns>Returns object of type ItemDataReponse as Json result either as a success or failed response call</returns>
+        </member>
+        <member name="M:Chat.Api.Controllers.MessageController.GetList(System.Int32)">
+            <summary>
+            To Get List of Messages
+            </summary>
+            <param name="groupId">Provide groupId</param>
+            <returns>Returns object of type ItemDataReponse as Json result either as a success or failed response call</returns>
+        </member>
+        <member name="M:Chat.Api.Controllers.UserController.Add(Chat.Core.Domains.UserDto)">
+            <summary>
+            To Add new User of entity Model.
+            </summary>
+            <param name="ChatGroupDto">Requies parameter of required entity Model</param>
+            <returns>Returns object of type Reponse as Json result as a success or failed response</returns>
+        </member>
+        <member name="M:Chat.Api.Controllers.UserGroupController.GetList(System.Int32)">
+            <summary>
+            To Get List of Group
+            </summary>
+            <param name="userId">Provide current filtering, sorting and paging criteria</param>
+            <returns>Returns object of type ItemDataReponse as Json result either as a success or failed response call</returns>
+        </member>
+        <member name="T:Chat.Api.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>
