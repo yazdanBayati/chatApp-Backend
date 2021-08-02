@@ -78,7 +78,7 @@ namespace Chat.DataAccess.Repositories
             return DbSet.Find(id);
         }
 
-        public virtual IQueryable<T> GetAll()
+        public virtual IQueryable<T> GetIQueryable()
         {
             return DbSet.AsNoTracking();
         }

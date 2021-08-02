@@ -33,6 +33,7 @@
         "dependencies": {
           "AutoMapper": "10.1.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.1",
+          "Chat.ApplicationService": "1.0.0",
           "Chat.Core": "1.0.0",
           "Chat.DataAccess": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.8",
@@ -1829,6 +1830,19 @@
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XmlDocument": "4.3.0"
+        }
+      },
+      "Chat.ApplicationService/1.0.0": {
+        "dependencies": {
+          "AutoMapper": "10.1.1",
+          "Chat.Core": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.8"
+        },
+        "runtime": {
+          "Chat.ApplicationService.dll": {}
+        },
+        "compile": {
+          "Chat.ApplicationService.dll": {}
         }
       },
       "Chat.Core/1.0.0": {
@@ -4453,6 +4467,11 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    },
+    "Chat.ApplicationService/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Chat.Core/1.0.0": {
       "type": "project",

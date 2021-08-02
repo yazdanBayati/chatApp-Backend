@@ -7,13 +7,14 @@ namespace Chat.Api.Extensions
     {
         public static void ConfigureCors(this IServiceCollection services, IConfiguration configuration)
         {
-            var corsOrigins =  configuration.GetSection("Cors").ToString();
+            var corsOrigins = configuration.GetValue<string>("Cors:Origins");
             services.AddCors(options =>
             {
                 options.AddPolicy("ClientPermission", policy =>
                 {
                     policy.AllowAnyHeader()
                         .AllowAnyMethod()
+                        //.AllowAnyOrigin()//todo:change to WithOrigins 
                         .WithOrigins(corsOrigins)
                         .AllowCredentials();
                 });

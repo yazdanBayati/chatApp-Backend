@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
-namespace Chat.Core.Domains
+namespace Chat.ApplicationService.Dtos
 {
     public abstract class BaseDto
     {

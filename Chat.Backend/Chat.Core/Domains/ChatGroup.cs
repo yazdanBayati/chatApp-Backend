@@ -11,7 +11,5 @@ namespace Chat.Api.Core.Domains
     {
         [Column(TypeName = "NVARCHAR(50)")]
         public string Title { get; set; }
-        [Column(TypeName = "NVARCHAR(50)")]
-        public string Name { get; set; }
     }
 }

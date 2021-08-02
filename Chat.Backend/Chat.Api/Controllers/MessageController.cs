@@ -1,6 +1,5 @@
-﻿using AutoMapper;
-using Chat.Api.Core.Domains;
-using Chat.Api.Dtos;
+﻿using Chat.ApplicationService.Dtos;
+using Chat.ApplicationService.Services.Message;
 using Chat.Core.Domains;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -15,12 +14,10 @@ namespace Chat.Api.Controllers
     [Route("messages")]
     public class MessageController : ControllerBase
     {
-        private readonly IMessageRepository _repositroy;
-        private readonly IMapper _mapper;
-        public MessageController(IMessageRepository repositroy, IMapper mapper)
+        private readonly IMessageService _service;
+        public MessageController(IMessageService service)
         {
-            this._repositroy = repositroy;
-            this._mapper = mapper;
+            this._service = service;
         }
         /// <summary>
         /// To Get List of Messages
@@ -29,16 +26,11 @@ namespace Chat.Api.Controllers
         /// <returns>Returns object of type ItemDataReponse as Json result either as a success or failed response call</returns>
         [HttpGet]
         [Produces("application/json")]
-        public async Task<ActionResult<ItemDataReponse<List<ChatMessage>>>> GetList([FromQuery] int groupId)
+        [Route("{groupId}/getgroupmessages")]
+        
+        public async Task<ActionResult<ItemDataReponse<List<ChatMessageDto>>>> GetList(int groupId)
         {
-            var list = await this._repositroy.GetAll().Where(x=> x.GroupId == groupId).ToListAsync();
-
-            var response = new ItemDataReponse<List<ChatMessage>>
-            {
-                Success = true,
-                Data = this._mapper.Map<List<ChatMessage>>(list)
-            };
-
+            var response = await this._service.GetList(groupId);
             return Ok(response);
         }
     }

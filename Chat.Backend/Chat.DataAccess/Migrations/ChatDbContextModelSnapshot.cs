@@ -29,9 +29,6 @@ namespace Chat.DataAccess.Migrations
                     b.Property<DateTime>("DateCreated")
                         .HasColumnType("DATETIME");
 
-                    b.Property<string>("Name")
-                        .HasColumnType("NVARCHAR(50)");
-
                     b.Property<string>("Title")
                         .HasColumnType("NVARCHAR(50)");
 

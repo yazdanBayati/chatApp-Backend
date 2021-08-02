@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Chat.Api.Dtos
+namespace Chat.ApplicationService.Dtos
 {
     public class ItemReponse
     {
@@ -14,10 +14,10 @@ namespace Chat.Api.Dtos
         public int? ErrorCode { get; set; }
 
         public string ErrorMessage { get; set; }
-        
+
     }
 
-    public class ItemDataReponse<T>:ItemReponse
+    public class ItemDataReponse<T> : ItemReponse
     {
         public T Data { get; set; }
     }

@@ -20,7 +20,7 @@ namespace Chat.Core.Domains
 
         Task<T> GetAsync(int id);
 
-        IQueryable<T> GetAll();
+        IQueryable<T> GetIQueryable();
 
         void Detach(T entity);
     }

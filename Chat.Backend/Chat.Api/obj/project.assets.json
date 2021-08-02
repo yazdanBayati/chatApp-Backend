@@ -2228,6 +2228,21 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Chat.ApplicationService/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "AutoMapper": "10.1.1",
+          "Chat.Core": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "5.0.8"
+        },
+        "compile": {
+          "bin/placeholder/Chat.ApplicationService.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Chat.ApplicationService.dll": {}
+        }
+      },
       "Chat.Core/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -7633,6 +7648,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "Chat.ApplicationService/1.0.0": {
+      "type": "project",
+      "path": "../Chat.ApplicationService/Chat.ApplicationService.csproj",
+      "msbuildProject": "../Chat.ApplicationService/Chat.ApplicationService.csproj"
+    },
     "Chat.Core/1.0.0": {
       "type": "project",
       "path": "../Chat.Core/Chat.Core.csproj",
@@ -7648,6 +7668,7 @@
     ".NETCoreApp,Version=v3.1": [
       "AutoMapper >= 10.1.1",
       "AutoMapper.Extensions.Microsoft.DependencyInjection >= 8.1.1",
+      "Chat.ApplicationService >= 1.0.0",
       "Chat.Core >= 1.0.0",
       "Chat.DataAccess >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.8",
@@ -7695,6 +7716,9 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
+            "C:\\Projects\\Samples\\Chat\\chatApp-Backend\\Chat.Backend\\Chat.ApplicationService\\Chat.ApplicationService.csproj": {
+              "projectPath": "C:\\Projects\\Samples\\Chat\\chatApp-Backend\\Chat.Backend\\Chat.ApplicationService\\Chat.ApplicationService.csproj"
+            },
             "C:\\Projects\\Samples\\Chat\\chatApp-Backend\\Chat.Backend\\Chat.Core\\Chat.Core.csproj": {
               "projectPath": "C:\\Projects\\Samples\\Chat\\chatApp-Backend\\Chat.Backend\\Chat.Core\\Chat.Core.csproj"
             },

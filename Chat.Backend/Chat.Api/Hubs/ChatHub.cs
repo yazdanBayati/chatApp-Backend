@@ -1,5 +1,9 @@
 ﻿using Chat.Api.Core.Domains;
 using Chat.Api.Hubs.Clients;
+using Chat.ApplicationService.Dtos;
+using Chat.ApplicationService.Services.Group;
+using Chat.ApplicationService.Services.Message;
+using Chat.ApplicationService.Services.UserGroup;
 using Microsoft.AspNetCore.SignalR;
 using System;
 using System.Collections.Generic;
@@ -10,9 +14,35 @@ namespace Chat.Api
 {
     public class ChatHub:Hub<IChatClient>
     {
+        private readonly IGroupService _groupService;
+        private readonly IUserGroupSevice _userGroupService;
+        private readonly IMessageService _messageSevice;
+        public ChatHub(IGroupService groupService, IUserGroupSevice userGroupService, IMessageService messageSevice)
+        {
+            this._groupService = groupService;
+            this._userGroupService = userGroupService;
+        }
         public async Task SendMessageToGroup(ChatMessageDto message)
         {
-            await Clients.Group(message.GroupName).ReceiveMessage(message);
+            var groupName = IdToGroupName(message.GroupId);
+            await Clients.Group(groupName).ReceiveMessage(message);
+
+            /// <summary>
+            /// for performance reaseon first call the hub service to send the message to clinet sooner
+            /// its better use Async call to keep the data consistency(AMPQ protocol)
+            /// </summary>
+            await this._messageSevice.Add(message);
+        }
+
+        public async Task<ItemReponse> CreateGroup(ChatGroupDto group)
+        {
+            var response  = await this._groupService.Add(group);
+            if (response.Success)
+            {
+                await Clients.All.AddGroup(response.Data);
+            }
+
+            return response;
         }
 
         public override Task OnConnectedAsync()
@@ -25,9 +55,28 @@ namespace Chat.Api
             return base.OnDisconnectedAsync(exception);
         }
 
-        public async Task JoinGroup(string groupName)
+        public async Task<ItemReponse> JoinGroup(UserGroupDto userGroupDto)
         {
-            await Groups.AddToGroupAsync(Context.ConnectionId, groupName);
+            var response = await this._userGroupService.Add(userGroupDto);
+            if (response.Success)
+            {
+                var groupName = IdToGroupName(userGroupDto.GroupId);
+                await Groups.AddToGroupAsync(Context.ConnectionId, groupName);
+            }
+            return response;
         }
+
+        public async Task<ItemReponse> LeftGroup(int id)
+        {
+            var rsp= await this._userGroupService.Delete(id);
+            if (rsp.Success)
+            {
+                var groupName = IdToGroupName(id);
+                await Groups.RemoveFromGroupAsync(Context.ConnectionId, groupName);
+            }
+            return rsp;
+        }
+
+        private string IdToGroupName(int listId) => $"chat-group-{listId}";
     }
 }

@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 using Chat.Api.Core.Domains;
-using Chat.Api.Dtos;
+using Chat.ApplicationService.Dtos;
 using Chat.Core.Domains;
 
 namespace Chat.Api.Extensions
