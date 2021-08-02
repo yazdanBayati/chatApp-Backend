@@ -47,6 +47,10 @@ namespace Chat.Api
 
         public override Task OnConnectedAsync()
         {
+            var user = Context.User.Identity.Name;
+
+            //call User
+            
             return base.OnConnectedAsync();
         }
 

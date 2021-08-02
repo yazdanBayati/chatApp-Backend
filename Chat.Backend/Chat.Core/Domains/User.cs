@@ -9,7 +9,7 @@ namespace Chat.Core.Domains
     {
         [Column(TypeName = "NVARCHAR(50)")]
         public string UserName { get; set; }
-        [Column(TypeName = "NVARCHAR(50)")]
+        [Column(TypeName = "NVARCHAR(1000)")]
         public string Password { get; set; }
     }
 }

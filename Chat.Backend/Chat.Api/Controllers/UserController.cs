@@ -1,6 +1,10 @@
 ﻿using AutoMapper;
+using Chat.ApplicationService.Dtos;
+using Chat.ApplicationService.Services.Auth;
+using Chat.ApplicationService.Services.User;
 using Chat.Core.Domains;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace Chat.Api.Controllers
 {
@@ -8,34 +12,39 @@ namespace Chat.Api.Controllers
     [Route("users")]
     public class UserController : ControllerBase
     {
-        private readonly IUserRepository _repositroy;
-        private readonly IMapper _mapper;
-        public UserController(IUserRepository repositroy, IMapper mapper)
+        private readonly IUserService _service;
+        public UserController(IUserService service)
         {
-            this._repositroy = repositroy;
-            this._mapper = mapper;
+            this._service = service;
         }
 
-        /// <summary>
-        /// To Add new User of entity Model.
-        /// </summary>
-        /// <param name="requestDto">Requies parameter of required entity Model</param>
-        /// <returns>Returns object of type Reponse as Json result as a success or failed response</returns>
-        //[HttpPost]
-        //[Produces("application/json")]
-        //public async Task<ActionResult<ItemReponse>> Add([FromBody] UserDto requestDto)
-        //{
-        //    //var user = User?.Claims.FullName();
-        //    var entity = this._mapper.Map<User>(requestDto);
+        // <summary>
+        // Register New User
+        // </summary>
+        // <param name = "requestDto" > Requies parameter of required entity Model</param>
+        // <returns>Returns object of type Reponse as Json result as a success or failed response</returns>
+        [HttpPost]
+        [Produces("application/json")]
+        [Route("register")]
+        public async Task<ActionResult<ItemReponse>> Register([FromBody] UserDto requestDto)
+        {
+            var response = await this._service.Add(requestDto);
+            return Ok(response);
+        }
 
-        //    await this._repositroy.AddAsync(entity);
-            
-        //    var response = new ItemReponse
-        //    {
-        //        Success = true,
-        //    };
 
-        //    return Ok(response);
-        //}
+        // <summary>
+        // Login
+        // </summary>
+        // <param name = "requestDto" > Requies parameter of required entity Model</param>
+        // <returns>Returns object of type Reponse as Json result as a success or failed response</returns>
+        [HttpPost]
+        [Produces("application/json")]
+        [Route("login")]
+        public async Task<ActionResult<ItemReponse>> Login([FromBody] UserDto requestDto)
+        {
+            var response = await this._service.Login(requestDto);
+            return Ok(response);
+        }
     }
 }

@@ -41,7 +41,8 @@ namespace Chat.Api
             services.ConfigureCors(Configuration);
             services.ConfigureSwagger();
             services.AddAutoMapper(typeof(MapperProfiles));
-            services.RegisterChatServices();
+            services.RegisterChatServices(Configuration);
+            services.ConfigureIdentity(Configuration);
 
         }
 

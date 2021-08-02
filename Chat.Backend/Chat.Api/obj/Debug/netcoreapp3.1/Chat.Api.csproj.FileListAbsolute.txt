@@ -77,3 +77,4 @@ C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Api\bin\Debug\netcore
 C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Api\bin\Debug\netcoreapp3.1\Chat.Api.xml
 C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Api\bin\Debug\netcoreapp3.1\Chat.ApplicationService.dll
 C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Api\bin\Debug\netcoreapp3.1\Chat.ApplicationService.pdb
+C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Api\bin\Debug\netcoreapp3.1\BCrypt.Net-Next.dll

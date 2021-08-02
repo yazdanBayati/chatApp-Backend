@@ -9,5 +9,7 @@ namespace Chat.ApplicationService.Services.User
     public interface IUserService
     {
         Task<ItemReponse> Add(UserDto userDto);
+
+        Task<ItemDataReponse<UserDto>> Login(UserDto userDto);
     }
 }
