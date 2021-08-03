@@ -1,6 +1,7 @@
 ﻿using Chat.ApplicationService.Dtos;
 using Chat.ApplicationService.Services.Message;
 using Chat.Core.Domains;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -12,6 +13,7 @@ namespace Chat.Api.Controllers
 {
     [ApiController]
     [Route("messages")]
+    [Authorize]
     public class MessageController : ControllerBase
     {
         private readonly IMessageService _service;

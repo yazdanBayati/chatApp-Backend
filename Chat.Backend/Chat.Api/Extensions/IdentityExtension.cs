@@ -28,6 +28,18 @@ namespace Chat.Api.Extensions
                             Encoding.UTF8.GetBytes(configuration.GetValue<string>("JWTSecretKey"))
                         )
                     };
+                    options.Events = new JwtBearerEvents
+                    {
+                        OnMessageReceived = context =>
+                        {
+                            var accessToken = context.Request.Query["access_token"];
+                            if (!string.IsNullOrEmpty(accessToken))
+                            {
+                                context.Token = accessToken;
+                            }
+                            return Task.CompletedTask;
+                        }
+                    };
                 });
         }
     }

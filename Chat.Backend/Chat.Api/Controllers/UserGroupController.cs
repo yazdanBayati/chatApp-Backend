@@ -3,6 +3,7 @@
 using Chat.ApplicationService.Dtos;
 using Chat.ApplicationService.Services.UserGroup;
 using Chat.Core.Domains;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
@@ -13,6 +14,7 @@ namespace Chat.Api.Controllers
 {
     [ApiController]
     [Route("usergroups")]
+    [Authorize]
     public class UserGroupController : ControllerBase
     {
         private readonly IUserGroupSevice _service;

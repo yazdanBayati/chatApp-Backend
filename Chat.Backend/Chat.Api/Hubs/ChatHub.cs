@@ -4,6 +4,7 @@ using Chat.ApplicationService.Dtos;
 using Chat.ApplicationService.Services.Group;
 using Chat.ApplicationService.Services.Message;
 using Chat.ApplicationService.Services.UserGroup;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.SignalR;
 using System;
 using System.Collections.Generic;
@@ -12,6 +13,7 @@ using System.Threading.Tasks;
 
 namespace Chat.Api
 {
+    [Authorize]
     public class ChatHub:Hub<IChatClient>
     {
         private readonly IGroupService _groupService;
@@ -21,17 +23,23 @@ namespace Chat.Api
         {
             this._groupService = groupService;
             this._userGroupService = userGroupService;
+            this._messageSevice = messageSevice;
         }
         public async Task SendMessageToGroup(ChatMessageDto message)
         {
-            var groupName = IdToGroupName(message.GroupId);
-            await Clients.Group(groupName).ReceiveMessage(message);
+            await BroadCastMessageToGroup(message);
 
             /// <summary>
             /// for performance reaseon first call the hub service to send the message to clinet sooner
             /// its better use Async call to keep the data consistency(AMPQ protocol)
             /// </summary>
             await this._messageSevice.Add(message);
+        }
+
+        private async Task BroadCastMessageToGroup(ChatMessageDto message)
+        {
+            var groupName = IdToGroupName(message.GroupId);
+            await Clients.Group(groupName).ReceiveMessage(message);
         }
 
         public async Task<ItemReponse> CreateGroup(ChatGroupDto group)
@@ -45,13 +53,21 @@ namespace Chat.Api
             return response;
         }
 
-        public override Task OnConnectedAsync()
+        public override  Task OnConnectedAsync()
         {
-            var user = Context.User.Identity.Name;
-
-            //call User
-            
+            AssignCurrentUserGroups();
             return base.OnConnectedAsync();
+        }
+
+        private void AssignCurrentUserGroups()
+        {
+            var response = this._userGroupService.GetList(Convert.ToInt32(Context.User.Identity.Name)).Result;
+
+            foreach (var group in response.Data)
+            {
+                var groupName = IdToGroupName(group.GroupId);
+                Groups.AddToGroupAsync(Context.ConnectionId, groupName);
+            }
         }
 
         public override Task OnDisconnectedAsync(Exception exception)
@@ -67,7 +83,23 @@ namespace Chat.Api
                 var groupName = IdToGroupName(userGroupDto.GroupId);
                 await Groups.AddToGroupAsync(Context.ConnectionId, groupName);
             }
+            await LoadGroupHistroy(userGroupDto);
+
             return response;
+        }
+
+        private async Task LoadGroupHistroy(UserGroupDto userGroupDto)
+        {
+            var getUserListResponse = await this._messageSevice.GetList(userGroupDto.GroupId);
+
+            if (getUserListResponse.Success)
+            {
+                foreach (var message in getUserListResponse.Data)
+                {
+                    await BroadCastMessageToGroup(message);
+
+                }
+            }
         }
 
         public async Task<ItemReponse> LeftGroup(int id)

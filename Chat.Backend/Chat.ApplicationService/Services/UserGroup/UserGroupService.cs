@@ -20,20 +20,31 @@ namespace Chat.ApplicationService.Services.UserGroup
         }
         public async Task<ItemReponse> Add(UserGroupDto userGroupDto)
         {
-            var count = this._repositroy.GetIQueryable().Count();
+            var count = _repositroy.GetIQueryable().Count();
             var response = new ItemReponse();
+
+            var existItem = await _repositroy.GetIQueryable().FirstOrDefaultAsync(x => x.UserId == userGroupDto.UserId && x.GroupId == userGroupDto.GroupId);
             
-            if (count < 20)// check size of group members
+            if(existItem == null)
             {
-                var entity = this._mapper.Map<Chat.Core.Domains.UserGroup>(userGroupDto);
-                await this._repositroy.AddAsync(entity);
-                response.Success = true;
+                if (count < 20)// check size of group members
+                {
+                    var entity = this._mapper.Map<Chat.Core.Domains.UserGroup>(userGroupDto);
+                    await this._repositroy.AddAsync(entity);
+                    response.Success = true;
+                }
+                else
+                {
+                    response.Success = false;
+                    response.Error = "Can not add more than 20 member to Group";
+                }
             }
             else
             {
                 response.Success = false;
-                response.Error = "Can not add more than 20 member to Group";
+                response.Error = "this user already assigned to this group";
             }
+           
 
             return response;
         }

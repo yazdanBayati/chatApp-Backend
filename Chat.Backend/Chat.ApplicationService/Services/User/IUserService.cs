@@ -10,6 +10,8 @@ namespace Chat.ApplicationService.Services.User
     {
         Task<ItemReponse> Add(UserDto userDto);
 
-        Task<ItemDataReponse<UserDto>> Login(UserDto userDto);
+        Task<ItemDataReponse<AuthData>> Login(UserDto userDto);
+
+        Task<ItemDataReponse<UserDto>> GetUserById(int userId);
     }
 }

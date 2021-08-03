@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Chat.Api</name>
+    </assembly>
+    <members>
+        <member name="M:Chat.Api.Controllers.GroupController.GetList">
+            <summary>
+            To Get List of Group
+            </summary>
+            <returns>Returns object of type ItemDataReponse as Json result either as a success or failed response call</returns>
+        </member>
+        <member name="M:Chat.Api.Controllers.MessageController.GetList(System.Int32)">
+            <summary>
+            To Get List of Messages
+            </summary>
+            <param name="groupId">Provide groupId</param>
+            <returns>Returns object of type ItemDataReponse as Json result either as a success or failed response call</returns>
+        </member>
+        <member name="M:Chat.Api.Controllers.UserGroupController.GetList(System.Int32)">
+            <summary>
+            To Get List of Group
+            </summary>
+            <param name="userId">Provide current filtering, sorting and paging criteria</param>
+            <returns>Returns object of type ItemDataReponse as Json result either as a success or failed response call</returns>
+        </member>
+        <member name="T:Chat.Api.Hubs.Clients.IChatClient">
+            <summary>
+            send data to client
+            </summary>
+        </member>
+        <member name="M:Chat.Api.Hubs.Clients.IChatClient.ReceiveMessage(Chat.ApplicationService.Dtos.ChatMessageDto)">
+            <summary>
+            send meesage to clinet
+            </summary>
+            <param name="message"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Chat.Api.Hubs.Clients.IChatClient.AddGroup(Chat.ApplicationService.Dtos.ChatGroupDto)">
+            <summary>
+            notify the clients about new group
+            </summary>
+            <param name="group"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Chat.Api.Hubs.Clients.IChatClient.JoinUserToGroup(System.String)">
+            <summary>
+            notify all user from new user join
+            </summary>
+            <param name="userName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Chat.Api.Startup">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -17,7 +17,7 @@ namespace Chat.ApplicationService.Services.User
         private readonly IUserRepository _repositroy;
         private readonly IMapper _mapper;
         private readonly IAuthService _authService;
-        public UserService(IUserRepository repositroy, IMapper mapper, , IAuthService authService)
+        public UserService(IUserRepository repositroy, IMapper mapper, IAuthService authService)
         {
             this._repositroy = repositroy;
             this._mapper = mapper;
@@ -37,18 +37,11 @@ namespace Chat.ApplicationService.Services.User
             }
             else
             {
-
+                await this._repositroy.AddAsync(entity);
+                response.Success = true;
             }
-            
-            await this._repositroy.AddAsync(entity);
-
-            var response = new ItemReponse
-            {
-                Success = true,
-            };
 
             return response;
-
         }
 
         public async Task<ItemDataReponse<AuthData>> Login(UserDto userDto)
@@ -72,12 +65,30 @@ namespace Chat.ApplicationService.Services.User
                 else
                 {
                     var authData = this._authService.GetAuthData(user.Id.ToString());
-                    response.Data = _mapper.Map<AuthData>(user);
+                    response.Data = authData;
+                    response.Success = true;
                 }
             }
 
             return response;
 
+        }
+
+        public async Task<ItemDataReponse<UserDto>> GetUserById(int userId)
+        {
+            var user = await this._repositroy.GetIQueryable().FirstOrDefaultAsync(x => x.Id == userId);
+
+            if(user == null)
+            {
+                throw new Exception("Can not find User");
+            }
+            var response = new ItemDataReponse<UserDto>
+            {
+                Success = true,
+                Data = this._mapper.Map<UserDto>(user)
+            };
+
+            return response;
         }
 
     }

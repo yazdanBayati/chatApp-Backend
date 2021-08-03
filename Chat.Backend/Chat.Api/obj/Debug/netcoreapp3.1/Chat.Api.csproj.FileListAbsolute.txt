@@ -78,3 +78,16 @@ C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Api\bin\Debug\netcore
 C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Api\bin\Debug\netcoreapp3.1\Chat.ApplicationService.dll
 C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Api\bin\Debug\netcoreapp3.1\Chat.ApplicationService.pdb
 C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Api\bin\Debug\netcoreapp3.1\BCrypt.Net-Next.dll
+C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Api\bin\Debug\netcoreapp3.1\System.Web.Razor.dll
+C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Api\bin\Debug\netcoreapp3.1\System.Web.Helpers.dll
+C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Api\bin\Debug\netcoreapp3.1\System.Web.WebPages.Deployment.dll
+C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Api\bin\Debug\netcoreapp3.1\System.Web.WebPages.Razor.dll
+C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Api\bin\Debug\netcoreapp3.1\System.Web.WebPages.dll
+C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Api\bin\Debug\netcoreapp3.1\Microsoft.Web.Infrastructure.dll
+C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Api\bin\Debug\netcoreapp3.1\MessagePack.dll
+C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
+C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.SignalR.Common.dll
+C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.SignalR.Protocols.MessagePack.dll
+C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Api\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll

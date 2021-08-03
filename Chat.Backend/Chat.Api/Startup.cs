@@ -38,6 +38,7 @@ namespace Chat.Api
             });
 
             services.AddSignalR();
+                  
             services.ConfigureCors(Configuration);
             services.ConfigureSwagger();
             services.AddAutoMapper(typeof(MapperProfiles));
@@ -60,6 +61,7 @@ namespace Chat.Api
 
             app.AttachSwagger(GetType());
 
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

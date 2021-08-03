@@ -41,9 +41,19 @@ namespace Chat.Api.Controllers
         [HttpPost]
         [Produces("application/json")]
         [Route("login")]
-        public async Task<ActionResult<ItemReponse>> Login([FromBody] UserDto requestDto)
+        public async Task<ActionResult<ItemDataReponse<AuthData>>> Login([FromBody] UserDto requestDto)
         {
             var response = await this._service.Login(requestDto);
+            return Ok(response);
+        }
+
+        [HttpGet]
+        [Produces("application/json")]
+        [Route("{userId}/getuserbyid")]
+        public async Task<ActionResult<ItemDataReponse<UserDto>>> GetUserById(int userId)
+        {
+            var response = await this._service.GetUserById(userId);
+
             return Ok(response);
         }
     }
