@@ -9,7 +9,7 @@ namespace Chat.Api.Controllers
 {
     [ApiController]
     [Route("groups")]
-    [Authorize]
+    //[Authorize]
     public class GroupController : ControllerBase
     {
 

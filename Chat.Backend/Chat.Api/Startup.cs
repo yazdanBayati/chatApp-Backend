@@ -31,16 +31,26 @@ namespace Chat.Api
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-
-            services.AddDbContext<ChatDbContext>(options =>
+            bool devEnv = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development";
+            if (devEnv) {
+                services.AddDbContext<ChatDbContext>(options =>
+                {
+                    options.UseSqlServer(Configuration.GetConnectionString("ChatDbConnection"));
+                });
+            }
+            else
             {
-                options.UseSqlServer(Configuration.GetConnectionString("ChatDbConnection"));
-            });
+                services.AddDbContext<ChatDbContext>(options =>
+                {
+                    options.UseSqlServer(Configuration.GetConnectionString("ChatDbConnectionProd"));
+                });
+            }
+           
 
             services.AddSignalR();
                   
             services.ConfigureCors(Configuration);
-            services.ConfigureSwagger();
+            //services.ConfigureSwagger();
             services.AddAutoMapper(typeof(MapperProfiles));
             services.RegisterChatServices(Configuration);
             services.ConfigureIdentity(Configuration);
@@ -59,7 +69,7 @@ namespace Chat.Api
 
             app.UseCors("ClientPermission");
 
-            app.AttachSwagger(GetType());
+            //app.AttachSwagger(GetType());
 
             app.UseAuthentication();
             app.UseAuthorization();
@@ -69,7 +79,7 @@ namespace Chat.Api
                 endpoints.MapControllers();
                 endpoints.MapHub<ChatHub>("/hubs/chat");
             });
-            dbContext.Database.Migrate();
+            //dbContext.Database.Migrate();
 
         }
     }

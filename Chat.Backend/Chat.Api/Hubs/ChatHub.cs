@@ -96,8 +96,7 @@ namespace Chat.Api
             {
                 foreach (var message in getUserListResponse.Data)
                 {
-                    await BroadCastMessageToGroup(message);
-
+                    await Clients.Caller.ReceiveMessage(message);
                 }
             }
         }
