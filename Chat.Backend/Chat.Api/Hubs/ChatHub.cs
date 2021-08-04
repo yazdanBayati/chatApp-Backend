@@ -101,12 +101,12 @@ namespace Chat.Api
             }
         }
 
-        public async Task<ItemReponse> LeftGroup(int id)
+        public async Task<ItemReponse> LeftGroup(UserGroupDto userGroupDto)
         {
-            var rsp= await this._userGroupService.Delete(id);
+            var rsp= await this._userGroupService.Delete(userGroupDto);
             if (rsp.Success)
             {
-                var groupName = IdToGroupName(id);
+                var groupName = IdToGroupName(userGroupDto.GroupId);
                 await Groups.RemoveFromGroupAsync(Context.ConnectionId, groupName);
             }
             return rsp;

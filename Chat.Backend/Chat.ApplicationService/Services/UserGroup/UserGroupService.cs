@@ -49,9 +49,10 @@ namespace Chat.ApplicationService.Services.UserGroup
             return response;
         }
 
-        public async Task<ItemReponse> Delete(int id)
+        public async Task<ItemReponse> Delete(UserGroupDto userGroupDto)
         {
-            await this._repositroy.DeleteAsync(id);
+            var item = await this._repositroy.GetIQueryable().FirstOrDefaultAsync(x => x.UserId == userGroupDto.UserId && x.GroupId == userGroupDto.GroupId);
+            await this._repositroy.DeleteAsync(item.Id);
             var response = new ItemDataReponse<ChatGroupDto>
             {
                 Success = true,

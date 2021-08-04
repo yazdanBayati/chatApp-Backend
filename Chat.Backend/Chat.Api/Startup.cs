@@ -33,21 +33,27 @@ namespace Chat.Api
             services.AddControllers();
             bool devEnv = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT") == "Development";
             if (devEnv) {
+                services.AddSignalR();
                 services.AddDbContext<ChatDbContext>(options =>
                 {
                     options.UseSqlServer(Configuration.GetConnectionString("ChatDbConnection"));
                 });
+                services.ConfigureSwagger();
             }
             else
             {
+                var signalrConnection = Configuration.GetValue<string>("signalrConnection");
+                services.AddSignalR().AddAzureSignalR(signalrConnection);
+
                 services.AddDbContext<ChatDbContext>(options =>
                 {
                     options.UseSqlServer(Configuration.GetConnectionString("ChatDbConnectionProd"));
                 });
             }
-           
 
-            services.AddSignalR();
+
+            
+            
                   
             services.ConfigureCors(Configuration);
             //services.ConfigureSwagger();

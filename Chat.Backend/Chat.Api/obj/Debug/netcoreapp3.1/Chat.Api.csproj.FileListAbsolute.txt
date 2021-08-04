@@ -91,3 +91,14 @@ C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Api\bin\Debug\netcore
 C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.SignalR.Common.dll
 C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.SignalR.Protocols.MessagePack.dll
 C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Api\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
+C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Api\bin\Debug\netcoreapp3.1\Azure.Core.dll
+C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Api\bin\Debug\netcoreapp3.1\Azure.Identity.dll
+C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Api\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Connections.Client.dll
+C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Api\bin\Debug\netcoreapp3.1\Microsoft.Azure.SignalR.Common.dll
+C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Api\bin\Debug\netcoreapp3.1\Microsoft.Azure.SignalR.dll
+C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Api\bin\Debug\netcoreapp3.1\Microsoft.Azure.SignalR.Protocols.dll
+C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Api\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Api\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Api\bin\Debug\netcoreapp3.1\Microsoft.Rest.ClientRuntime.dll
+C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Api\bin\Debug\netcoreapp3.1\System.Memory.Data.dll
+C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Api\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll

@@ -9,6 +9,6 @@ namespace Chat.ApplicationService.Dtos
     public abstract class BaseDto
     {
         public int Id { get; set; }
-        public DateTime DateCreated { get; set; } = DateTime.UtcNow;
+        //public DateTime DateCreated { get; set; } = DateTime.UtcNow;
     }
 }
