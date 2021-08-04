@@ -8,26 +8,25 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\bayatisy\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "C:\\Users\\yazda\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projects\\Samples\\Chat\\chatApp-Backend\\Chat.Backend\\Chat.Core\\Chat.Core.csproj",
+      "projectUniqueName": "C:\\Programing\\Projects\\Personal\\chat\\chatApp-Backend\\Chat.Backend\\Chat.Core\\Chat.Core.csproj",
       "projectName": "Chat.Core",
-      "projectPath": "C:\\Projects\\Samples\\Chat\\chatApp-Backend\\Chat.Backend\\Chat.Core\\Chat.Core.csproj",
-      "packagesPath": "C:\\Users\\bayatisy\\.nuget\\packages\\",
-      "outputPath": "C:\\Projects\\Samples\\Chat\\chatApp-Backend\\Chat.Backend\\Chat.Core\\obj\\",
+      "projectPath": "C:\\Programing\\Projects\\Personal\\chat\\chatApp-Backend\\Chat.Backend\\Chat.Core\\Chat.Core.csproj",
+      "packagesPath": "C:\\Users\\yazda\\.nuget\\packages\\",
+      "outputPath": "C:\\Programing\\Projects\\Personal\\chat\\chatApp-Backend\\Chat.Backend\\Chat.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        "C:\\Microsoft\\Xamarin\\NuGet\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\bayatisy\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\yazda\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -68,7 +67,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

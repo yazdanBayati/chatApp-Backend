@@ -7,3 +7,12 @@ C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Core\obj\Debug\netcor
 C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Core\obj\Debug\netcoreapp3.1\Chat.Core.dll
 C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Core\obj\Debug\netcoreapp3.1\Chat.Core.pdb
 C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Core\obj\Debug\netcoreapp3.1\Chat.Core.csprojAssemblyReference.cache
+C:\Programing\Projects\Personal\chat\chatApp-Backend\Chat.Backend\Chat.Core\bin\Debug\netcoreapp3.1\Chat.Core.deps.json
+C:\Programing\Projects\Personal\chat\chatApp-Backend\Chat.Backend\Chat.Core\bin\Debug\netcoreapp3.1\Chat.Core.dll
+C:\Programing\Projects\Personal\chat\chatApp-Backend\Chat.Backend\Chat.Core\bin\Debug\netcoreapp3.1\Chat.Core.pdb
+C:\Programing\Projects\Personal\chat\chatApp-Backend\Chat.Backend\Chat.Core\obj\Debug\netcoreapp3.1\Chat.Core.csprojAssemblyReference.cache
+C:\Programing\Projects\Personal\chat\chatApp-Backend\Chat.Backend\Chat.Core\obj\Debug\netcoreapp3.1\Chat.Core.AssemblyInfoInputs.cache
+C:\Programing\Projects\Personal\chat\chatApp-Backend\Chat.Backend\Chat.Core\obj\Debug\netcoreapp3.1\Chat.Core.AssemblyInfo.cs
+C:\Programing\Projects\Personal\chat\chatApp-Backend\Chat.Backend\Chat.Core\obj\Debug\netcoreapp3.1\Chat.Core.csproj.CoreCompileInputs.cache
+C:\Programing\Projects\Personal\chat\chatApp-Backend\Chat.Backend\Chat.Core\obj\Debug\netcoreapp3.1\Chat.Core.dll
+C:\Programing\Projects\Personal\chat\chatApp-Backend\Chat.Backend\Chat.Core\obj\Debug\netcoreapp3.1\Chat.Core.pdb

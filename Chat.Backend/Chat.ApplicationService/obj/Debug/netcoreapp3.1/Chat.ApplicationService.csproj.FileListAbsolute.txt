@@ -10,3 +10,15 @@ C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.ApplicationService\ob
 C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.ApplicationService\obj\Debug\netcoreapp3.1\Chat.ApplicationService.csproj.CopyComplete
 C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.ApplicationService\obj\Debug\netcoreapp3.1\Chat.ApplicationService.dll
 C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.ApplicationService\obj\Debug\netcoreapp3.1\Chat.ApplicationService.pdb
+C:\Programing\Projects\Personal\chat\chatApp-Backend\Chat.Backend\Chat.ApplicationService\bin\Debug\netcoreapp3.1\Chat.ApplicationService.deps.json
+C:\Programing\Projects\Personal\chat\chatApp-Backend\Chat.Backend\Chat.ApplicationService\bin\Debug\netcoreapp3.1\Chat.ApplicationService.dll
+C:\Programing\Projects\Personal\chat\chatApp-Backend\Chat.Backend\Chat.ApplicationService\bin\Debug\netcoreapp3.1\Chat.ApplicationService.pdb
+C:\Programing\Projects\Personal\chat\chatApp-Backend\Chat.Backend\Chat.ApplicationService\bin\Debug\netcoreapp3.1\Chat.Core.dll
+C:\Programing\Projects\Personal\chat\chatApp-Backend\Chat.Backend\Chat.ApplicationService\bin\Debug\netcoreapp3.1\Chat.Core.pdb
+C:\Programing\Projects\Personal\chat\chatApp-Backend\Chat.Backend\Chat.ApplicationService\obj\Debug\netcoreapp3.1\Chat.ApplicationService.csprojAssemblyReference.cache
+C:\Programing\Projects\Personal\chat\chatApp-Backend\Chat.Backend\Chat.ApplicationService\obj\Debug\netcoreapp3.1\Chat.ApplicationService.AssemblyInfoInputs.cache
+C:\Programing\Projects\Personal\chat\chatApp-Backend\Chat.Backend\Chat.ApplicationService\obj\Debug\netcoreapp3.1\Chat.ApplicationService.AssemblyInfo.cs
+C:\Programing\Projects\Personal\chat\chatApp-Backend\Chat.Backend\Chat.ApplicationService\obj\Debug\netcoreapp3.1\Chat.ApplicationService.csproj.CoreCompileInputs.cache
+C:\Programing\Projects\Personal\chat\chatApp-Backend\Chat.Backend\Chat.ApplicationService\obj\Debug\netcoreapp3.1\Chat.ApplicationService.csproj.CopyComplete
+C:\Programing\Projects\Personal\chat\chatApp-Backend\Chat.Backend\Chat.ApplicationService\obj\Debug\netcoreapp3.1\Chat.ApplicationService.dll
+C:\Programing\Projects\Personal\chat\chatApp-Backend\Chat.Backend\Chat.ApplicationService\obj\Debug\netcoreapp3.1\Chat.ApplicationService.pdb

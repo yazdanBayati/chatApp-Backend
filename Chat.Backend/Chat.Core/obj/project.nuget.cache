@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "R6FdcwGYIkVZ6Yj/3ehU/tRyoBIheydKS2nd4HiYING3prW7GmIv/zrCyiJc07X2CgJUHz6reezy9fExQhfcGg==",
+  "dgSpecHash": "pqF+zCYxGuKd249tpvjHKiK5pdPyLVdcHEfzh7BIx+vE5UoWVXJlV4VBP8RvVUXcp0SW9xm6+PNzvg1jz0L3Mw==",
   "success": true,
-  "projectFilePath": "C:\\Projects\\Samples\\Chat\\chatApp-Backend\\Chat.Backend\\Chat.Core\\Chat.Core.csproj",
+  "projectFilePath": "C:\\Programing\\Projects\\Personal\\chat\\chatApp-Backend\\Chat.Backend\\Chat.Core\\Chat.Core.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
