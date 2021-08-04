@@ -75,7 +75,10 @@ namespace Chat.Api
 
             app.UseCors("ClientPermission");
 
-            //app.AttachSwagger(GetType());
+            if (env.IsDevelopment())
+            {
+                app.AttachSwagger(GetType());
+            }
 
             app.UseAuthentication();
             app.UseAuthorization();

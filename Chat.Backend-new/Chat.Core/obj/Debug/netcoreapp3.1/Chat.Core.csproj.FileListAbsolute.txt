@@ -1,0 +1,9 @@
+C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Core\bin\Debug\netcoreapp3.1\Chat.Core.deps.json
+C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Core\bin\Debug\netcoreapp3.1\Chat.Core.dll
+C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Core\bin\Debug\netcoreapp3.1\Chat.Core.pdb
+C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Core\obj\Debug\netcoreapp3.1\Chat.Core.AssemblyInfoInputs.cache
+C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Core\obj\Debug\netcoreapp3.1\Chat.Core.AssemblyInfo.cs
+C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Core\obj\Debug\netcoreapp3.1\Chat.Core.csproj.CoreCompileInputs.cache
+C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Core\obj\Debug\netcoreapp3.1\Chat.Core.dll
+C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Core\obj\Debug\netcoreapp3.1\Chat.Core.pdb
+C:\Projects\Samples\Chat\chatApp-Backend\Chat.Backend\Chat.Core\obj\Debug\netcoreapp3.1\Chat.Core.csprojAssemblyReference.cache
